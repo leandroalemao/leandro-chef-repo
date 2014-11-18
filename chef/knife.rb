@@ -10,7 +10,7 @@ validation_key           "~/.ssh/threetierchef-validator.pem"
 chef_server_url          "https://api.opscode.com/organizations/threetierchef"
 cache_type               'BasicFile'
 cache_options( :path => "#{ENV['HOME']}/.chef/checksums" )
-cookbook_path            ["#{current_dir}/../cookbooks"]
+cookbook_path            ["#{current_dir}/../cookbooks", "#{current_dir}/../my-cookbooks"]
 
 
 knife[:aws_access_key_id] = ENV['THREE_TIER_CHEF_AWS_ACCESS_KEY_ID']
